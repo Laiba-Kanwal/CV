@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laiba Kanwal - Portfolio</title>
+  <title>Laiba Kanwal | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
   <!-- Navigation -->
-  <nav id="navbar" class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <div class="logo">Laiba Kanwal</div>
       <ul class="nav-links">
@@ -33,22 +31,32 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hello, I'm <span class="highlight">Laiba Kanwal</span></h1>
+      <h1>
+        <span class="line">Hello, I'm</span>
+        <span class="highlight">Laiba Kanwal</span>
+      </h1>
       <p class="subtitle">Web & Game Developer | MERN Stack | Unity 3D</p>
       <div class="cta-buttons">
         <a href="#contact" class="btn-primary">Get in Touch</a>
         <a href="#projects" class="btn-secondary">View Projects</a>
       </div>
     </div>
+    <div class="hero-bg"></div>
   </section>
 
   <!-- Education -->
   <section class="section" id="education">
     <h2 class="section-title">Education</h2>
-    <ul class="education-list">
-      <li><strong>BS Software Engineering</strong> – GIFT University</li>
-      <li><strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges</li>
-      <li><strong>Matriculation</strong> – Jadeed Dastgir Ideal High School</li>
+    <ul class="timeline">
+      <li class="timeline-item">
+        <strong>BS Software Engineering</strong> – GIFT University
+      </li>
+      <li class="timeline-item">
+        <strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges
+      </li>
+      <li class="timeline-item">
+        <strong>Matriculation</strong> – Jadeed Dastgir Ideal High School
+      </li>
     </ul>
   </section>
 
@@ -56,99 +64,137 @@
   <section class="section" id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
-      <span class="skill-tag">C / C++</span>
-      <span class="skill-tag">Java</span>
-      <span class="skill-tag">JavaScript</span>
-      <span class="skill-tag">MERN Stack</span>
-      <span class="skill-tag">React Native</span>
-      <span class="skill-tag">Unity 3D</span>
-      <span class="skill-tag">Software QA</span>
+      <div class="skill-card"><i class="fas fa-microchip"></i> C / C++</div>
+      <div class="skill-card"><i class="fas fa-coffee"></i> Java</div>
+      <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-card"><i class="fas fa-layer-group"></i> MERN Stack</div>
+      <div class="skill-card"><i class="fab fa-react"></i> React Native</div>
+      <div class="skill-card"><i class="fas fa-gamepad"></i> Unity 3D</div>
+      <div class="skill-card"><i class="fas fa-vial"></i> Software QA</div>
     </div>
   </section>
 
   <!-- Certifications -->
   <section class="section" id="certifications">
     <h2 class="section-title">Certifications</h2>
-    <ul class="education-list">
-      <li>Microsoft Office Specialist: Word 2016 Expert</li>
-    </ul>
+    <div class="cert-card">
+      <i class="fas fa-certificate"></i>
+      Microsoft Office Specialist: Word 2016 Expert
+    </div>
   </section>
 
   <!-- Projects -->
   <section class="section" id="projects">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Hotel Booking System (MERN Stack)</h3>
-        <p>A full-stack website for hotel booking with real-time availability and admin dashboard.</p>
-        <a href="https://github.com/Laiba-Kanwal/Hotel-Booking-System" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
+        <div class="project-icon">🏨</div>
+        <h3>Hotel Booking System</h3>
+        <p>Full-stack MERN app with real-time availability and admin dashboard.</p>
+        <a href="https://github.com/Laiba-Kanwal/Hotel-Booking-System" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
 
       <div class="project-card">
-        <h3>Cosmetic Store Mobile App (React Native)</h3>
-        <p>App to manage cosmetics, orders, and inventory.</p>
-        <a href="https://github.com/Laiba-Kanwal/Cosmetic-App" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
+        <div class="project-icon">💄</div>
+        <h3>Cosmetic Store App</h3>
+        <p>React Native app for cosmetics inventory and order management.</p>
+        <a href="https://github.com/Laiba-Kanwal/Cosmetic-App" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
 
       <div class="project-card">
-        <h3>3D FPS Game (Unity)</h3>
-        <p>A Unity-based first-person shooter game with multiple levels and shooting mechanics.</p>
+        <div class="project-icon">🔫</div>
+        <h3>3D FPS Game</h3>
+        <p>Unity-based shooter with multiple levels and combat mechanics.</p>
       </div>
 
       <div class="project-card">
-        <h3>ERP System with ERPNext</h3>
-        <p>Customized ERP modules for business automation.</p>
+        <div class="project-icon">📊</div>
+        <h3>ERP System</h3>
+        <p>Custom ERPNext modules for business automation.</p>
       </div>
 
       <div class="project-card">
+        <div class="project-icon">❤️</div>
         <h3>Matchmaking Website</h3>
-        <p>A website with user profiles, filters, secure login, and admin panel.</p>
+        <p>User profiles, filters, secure login, and admin panel.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="section" id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <ul class="contact-list">
-      <li><i class="fas fa-envelope"></i> <a href="mailto:laibakanwal104770@gmail.com">laibakanwal104770@gmail.com</a></li>
-      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank">LinkedIn Profile</a></li>
-      <li><i class="fab fa-github"></i> <a href="https://github.com/Laiba-Kanwal" target="_blank">GitHub Profile</a></li>
-      <li><i class="fas fa-map-marker-alt"></i> Gujranwala, Punjab, Pakistan</li>
-    </ul>
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="contact-grid">
+      <a href="mailto:laibakanwal104770@gmail.com" class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>Email</span>
+      </a>
+      <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank" class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/Laiba-Kanwal" target="_blank" class="contact-item">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
+    <p class="location">📍 Gujranwala, Punjab, Pakistan</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Laiba Kanwal. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <p>Crafted with precision & passion</p>
+    <div class="footer-social">
       <a href="https://github.com/Laiba-Kanwal" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:laibakanwal104770@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
 
       hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
         hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
       });
 
       // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', e => {
           e.preventDefault();
           navLinks.classList.remove("active");
           hamburger.classList.remove("active");
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
+          document.querySelector(anchor.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
           });
         });
+      });
+
+      // Animate sections on scroll
+      const sections = document.querySelectorAll('.section');
+      const options = { threshold: 0.1 };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, options);
+
+      sections.forEach(section => {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        observer.observe(section);
       });
     });
   </script>
