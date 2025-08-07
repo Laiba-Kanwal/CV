@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laiba Kanwal - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-  <nav id="navbar">
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
     <div class="nav-container">
       <div class="logo">Laiba Kanwal</div>
       <ul class="nav-links">
@@ -23,95 +25,114 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Hello, I'm <span class="highlight">Laiba Kanwal</span></h1>
-    <p class="subtitle">Web & Game Developer | MERN Stack | Unity 3D</p>
-    <div class="cta-buttons">
-      <a href="#contact" class="btn-primary">Get in Touch</a>
-      <a href="#projects" class="btn-secondary">View Projects</a>
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Laiba Kanwal</span></h1>
+      <p class="subtitle">Web & Game Developer | MERN Stack | Unity 3D</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#projects" class="btn-secondary">View Projects</a>
+      </div>
     </div>
   </section>
 
+  <!-- Education -->
   <section class="section" id="education">
     <h2 class="section-title">Education</h2>
     <ul class="education-list">
-      <li>BS Software Engineering – GIFT University</li>
-      <li>Intermediate (ICS - Physics) – Punjab Group of Colleges</li>
-      <li>Matriculation – Jadeed Dastgir Ideal High School</li>
+      <li><strong>BS Software Engineering</strong> – GIFT University</li>
+      <li><strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges</li>
+      <li><strong>Matriculation</strong> – Jadeed Dastgir Ideal High School</li>
     </ul>
   </section>
 
+  <!-- Skills -->
   <section class="section" id="skills">
     <h2 class="section-title">Skills</h2>
-    <ul class="skills-grid">
-      <li>C / C++</li>
-      <li>Java</li>
-      <li>JavaScript</li>
-      <li>MERN Stack</li>
-      <li>React Native</li>
-      <li>Unity (3D Game Development)</li>
-      <li>Software Quality Assurance</li>
-    </ul>
+    <div class="skills-grid">
+      <span class="skill-tag">C / C++</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">MERN Stack</span>
+      <span class="skill-tag">React Native</span>
+      <span class="skill-tag">Unity 3D</span>
+      <span class="skill-tag">Software QA</span>
+    </div>
   </section>
 
-  <section class="section certifications" id="certifications">
+  <!-- Certifications -->
+  <section class="section" id="certifications">
     <h2 class="section-title">Certifications</h2>
     <ul class="education-list">
       <li>Microsoft Office Specialist: Word 2016 Expert</li>
     </ul>
   </section>
 
+  <!-- Projects -->
   <section class="section" id="projects">
     <h2 class="section-title">Projects</h2>
-    <ul class="education-list">
-      <li>
-        <strong>Hotel Booking System (MERN Stack)</strong><br>
-        A full-stack website for hotel booking with real-time availability and admin dashboard.<br>
-        <a href="https://github.com/Laiba-Kanwal/Hotel-Booking-System" target="_blank">View Code</a>
-      </li>
-      <li>
-        <strong>Cosmetic Store Mobile App (React Native)</strong><br>
-        App to manage cosmetics, orders, and inventory.<br>
-        <a href="https://github.com/Laiba-Kanwal/Cosmetic-App" target="_blank">View Code</a>
-      </li>
-      <li>
-        <strong>3D FPS Game (Unity)</strong><br>
-        A Unity-based first-person shooter game with multiple levels and shooting mechanics.<br>
-       
-      </li>
-      <li>
-        <strong>ERP System with ERPNext</strong><br>
-        Customized ERP modules for business automation.<br>
-       
-      </li>
-      <li>
-        <strong>Matchmaking Website</strong><br>
-        A website with user profiles, filters, secure login, and admin panel.<br>
-       
-      </li>
-    </ul>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Hotel Booking System (MERN Stack)</h3>
+        <p>A full-stack website for hotel booking with real-time availability and admin dashboard.</p>
+        <a href="https://github.com/Laiba-Kanwal/Hotel-Booking-System" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <h3>Cosmetic Store Mobile App (React Native)</h3>
+        <p>App to manage cosmetics, orders, and inventory.</p>
+        <a href="https://github.com/Laiba-Kanwal/Cosmetic-App" target="_blank" class="project-link">View Code <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <h3>3D FPS Game (Unity)</h3>
+        <p>A Unity-based first-person shooter game with multiple levels and shooting mechanics.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>ERP System with ERPNext</h3>
+        <p>Customized ERP modules for business automation.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Matchmaking Website</h3>
+        <p>A website with user profiles, filters, secure login, and admin panel.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Contact -->
   <section class="section" id="contact">
     <h2 class="section-title">Contact Me</h2>
-    <ul class="education-list">
-      <li>Email: <a href="mailto:laibakanwal104770@gmail.com">laibakanwal104770@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank">Visit Profile</a></li>
-      <li>GitHub: <a href="https://github.com/Laiba-Kanwal" target="_blank">View GitHub</a></li>
-      <li>Location: Gujranwala, Punjab, Pakistan</li>
+    <ul class="contact-list">
+      <li><i class="fas fa-envelope"></i> <a href="mailto:laibakanwal104770@gmail.com">laibakanwal104770@gmail.com</a></li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank">LinkedIn Profile</a></li>
+      <li><i class="fab fa-github"></i> <a href="https://github.com/Laiba-Kanwal" target="_blank">GitHub Profile</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> Gujranwala, Punjab, Pakistan</li>
     </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Laiba Kanwal. All rights reserved.</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Laiba-Kanwal" target="_blank">GitHub</a>
-      <a href="mailto:laibakanwal104770@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Laiba-Kanwal" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:laibakanwal104770@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
+
+  <!-- Smooth scroll behavior -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
