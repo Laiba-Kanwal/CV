@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laiba Kanwal | Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Navigation -->
@@ -135,7 +138,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>Turning ideas into interactive experiences</p>
+    <p>Where code meets creativity</p>
     <div class="footer-social">
       <a href="https://github.com/Laiba-Kanwal" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/laiba-kanwal-67a445323" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -143,17 +146,19 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
 
+      // Mobile Menu Toggle
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("active");
       });
 
-      // Smooth scroll
+      // Smooth Scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
           e.preventDefault();
@@ -165,10 +170,10 @@
         });
       });
 
-      // Animate sections on scroll
+      // Animate Sections on Scroll
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
+          entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.style.opacity = 1;
               entry.target.style.transform = "translateY(0)";
@@ -178,7 +183,7 @@
         { threshold: 0.1 }
       );
 
-      document.querySelectorAll(".section.compact").forEach((section) => {
+      document.querySelectorAll(".section.compact").forEach(section => {
         section.style.opacity = 0;
         section.style.transform = "translateY(20px)";
         section.style.transition = "all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1)";
@@ -188,4 +193,3 @@
   </script>
 </body>
 </html>
-
