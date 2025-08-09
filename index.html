@@ -6,7 +6,7 @@
   <title>Laiba Kanwal | Developer Portfolio</title>
   <meta name="description" content="Laiba Kanwal - Web & Game Developer | MERN Stack | Unity 3D | Software Engineering Student">
 
-  <!-- Fonts & Icons (No extra spaces) -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -52,9 +52,9 @@
   <section class="section" id="education">
     <h2 class="section-title">Education</h2>
     <ul class="timeline">
-      <li class="timeline-item"><strong>BS Software Engineering</strong> – GIFT University</li>
-      <li class="timeline-item"><strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges</li>
-      <li class="timeline-item"><strong>Matriculation</strong> – Jadeed Dastgir Ideal High School</li>
+      <li class="timeline-item">BS Software Engineering – GIFT University</li>
+      <li class="timeline-item">Intermediate (ICS - Physics) – Punjab Group of Colleges</li>
+      <li class="timeline-item">Matriculation – Jadeed Dastgir Ideal High School</li>
     </ul>
   </section>
 
@@ -154,11 +154,13 @@
       const navLinks = document.querySelector('.nav-links');
       const hamburger = document.querySelector('.hamburger');
 
+      // Toggle mobile menu
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
       });
 
+      // Smooth scroll with menu close
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
           e.preventDefault();
@@ -172,6 +174,7 @@
         });
       });
 
+      // Intersection Observer for fade-in effects
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
