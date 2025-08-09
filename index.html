@@ -6,7 +6,7 @@
   <title>Laiba Kanwal | Developer Portfolio</title>
   <meta name="description" content="Laiba Kanwal - Web & Game Developer | MERN Stack | Unity 3D | Software Engineering Student">
 
-  <!-- Fonts & Icons -->
+  <!-- Fonts & Icons (No extra spaces) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -52,15 +52,9 @@
   <section class="section" id="education">
     <h2 class="section-title">Education</h2>
     <ul class="timeline">
-      <li class="timeline-item">
-        <strong>BS Software Engineering</strong> – GIFT University
-      </li>
-      <li class="timeline-item">
-        <strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges
-      </li>
-      <li class="timeline-item">
-        <strong>Matriculation</strong> – Jadeed Dastgir Ideal High School
-      </li>
+      <li class="timeline-item"><strong>BS Software Engineering</strong> – GIFT University</li>
+      <li class="timeline-item"><strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges</li>
+      <li class="timeline-item"><strong>Matriculation</strong> – Jadeed Dastgir Ideal High School</li>
     </ul>
   </section>
 
@@ -154,20 +148,17 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const navbar = document.querySelector('.navbar');
       const navLinks = document.querySelector('.nav-links');
       const hamburger = document.querySelector('.hamburger');
 
-      // Mobile Menu Toggle
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
       });
 
-      // Smooth Scroll with Menu Close
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
           e.preventDefault();
@@ -176,35 +167,22 @@
           const target = document.querySelector(anchor.getAttribute('href'));
           if (target) {
             const offsetTop = target.offsetTop - navbar.offsetHeight;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: 'smooth'
-            });
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
           }
         });
       });
 
-      // Scroll Animation Observer (Staggered Reveal)
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add('visible');
-              }, index * 100);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
-      );
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), index * 100);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
-      // Observe animated elements
-      [
-        ...document.querySelectorAll('.timeline-item'),
-        ...document.querySelectorAll('.skill-card'),
-        ...document.querySelectorAll('.project-card'),
-        ...document.querySelectorAll('.contact-item')
-      ].forEach(el => observer.observe(el));
+      ['.timeline-item', '.skill-card', '.project-card', '.contact-item'].forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => observer.observe(el));
+      });
     });
   </script>
 </body>
