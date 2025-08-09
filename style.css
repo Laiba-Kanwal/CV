@@ -295,10 +295,7 @@ body {
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(40px);
   scroll-margin-top: var(--navbar-height);
-  transition: var(--transition);
 }
 
 .section-title {
@@ -337,18 +334,12 @@ body {
   box-shadow: var(--shadow);
   margin-bottom: 1.4rem;
   border: 1px solid var(--border);
-  transition: var(--transition);
   font-size: 1.15rem;
   position: relative;
   overflow: hidden;
-  transform: translateX(-20px);
-  opacity: 0;
-}
-
-.timeline-item.visible {
   opacity: 1;
   transform: translateX(0);
-  transition: all 0.8s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .timeline-item::before {
@@ -388,15 +379,6 @@ body {
   border: 1px solid var(--border);
   transition: var(--transition);
   cursor: default;
-  position: relative;
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-.skill-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.7s ease 0.1s;
 }
 
 .skill-card i {
@@ -430,9 +412,6 @@ body {
   box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
   font-size: 1.2rem;
   letter-spacing: 0.5px;
-  transform: scale(0.9);
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.8s forwards;
 }
 
 .cert-card i {
@@ -455,15 +434,8 @@ body {
   border: 1px solid var(--border);
   transition: var(--transition);
   text-align: center;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.project-card.visible {
   opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s ease;
+  transform: none;
 }
 
 .project-icon {
@@ -535,15 +507,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.contact-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.7s ease;
 }
 
 .contact-item i {
