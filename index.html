@@ -69,15 +69,41 @@
       <div class="skill-card"><i class="fab fa-react"></i> React Native</div>
       <div class="skill-card"><i class="fas fa-gamepad"></i> Unity 3D</div>
       <div class="skill-card"><i class="fas fa-vial"></i> Software QA</div>
+      <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-card"><i class="fas fa-database"></i> MongoDB</div>
+      <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="skill-card"><i class="fab fa-html5"></i> HTML/CSS</div>
+      <div class="skill-card"><i class="fas fa-mobile-alt"></i> Mobile Dev</div>
     </div>
   </section>
 
   <!-- Certifications -->
   <section class="section" id="certifications">
     <h2 class="section-title">Certifications</h2>
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      Microsoft Office Specialist: Word 2016 Expert
+    <div class="certifications-grid">
+      <div class="cert-card">
+        <i class="fas fa-certificate"></i>
+        <div class="cert-content">
+          <h3>Microsoft Office Specialist</h3>
+          <p>Word 2016 Expert</p>
+        </div>
+      </div>
+      
+      <div class="cert-card">
+        <i class="fas fa-certificate"></i>
+        <div class="cert-content">
+          <h3>Unity Certified User</h3>
+          <p>Unity Technologies</p>
+        </div>
+      </div>
+    
+      <div class="cert-card">
+        <i class="fas fa-certificate"></i>
+        <div class="cert-content">
+          <h3>Responsive Web Design</h3>
+          <p>freeCodeCamp</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -105,16 +131,33 @@
         <div class="project-icon">🔫</div>
         <h3>3D FPS Game</h3>
         <p>Unity-based shooter with multiple levels and combat mechanics.</p>
+        <a href="https://github.com/Laiba-Kanwal/3D-FPS-Game" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
       <div class="project-card">
         <div class="project-icon">📊</div>
         <h3>ERP System</h3>
         <p>Custom ERPNext modules for business automation.</p>
+        <a href="https://github.com/Laiba-Kanwal/ERP-System" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
       <div class="project-card">
         <div class="project-icon">❤️</div>
         <h3>Matchmaking Website</h3>
         <p>User profiles, filters, secure login, and admin panel.</p>
+        <a href="https://github.com/Laiba-Kanwal/Matchmaking-Website" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🎨</div>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio with modern design and smooth animations.</p>
+        <a href="https://github.com/Laiba-Kanwal/Portfolio" target="_blank" class="project-link">
+          View Code <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -134,6 +177,10 @@
       <a href="https://github.com/Laiba-Kanwal" target="_blank" class="contact-item">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
+      </a>
+      <a href="tel:+1234567890" class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>Call Me</span>
       </a>
     </div>
   </section>
@@ -173,6 +220,29 @@
           }
         });
       });
+
+      // Animation on scroll
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.timeline-item, .skill-card, .cert-card, .project-card, .contact-item');
+        elements.forEach(el => {
+          const position = el.getBoundingClientRect();
+          if (position.top < window.innerHeight - 100) {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }
+        });
+      };
+
+      // Set initial state for animation
+      document.querySelectorAll('.timeline-item, .skill-card, .cert-card, .project-card, .contact-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+
+      // Check on load and scroll
+      animateOnScroll();
+      window.addEventListener('scroll', animateOnScroll);
     });
   </script>
 </body>
