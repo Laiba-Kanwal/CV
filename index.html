@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laiba Kanwal | Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Laiba Kanwal - Web & Game Developer | MERN Stack | Unity 3D | Software Engineering Student">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">Laiba Kanwal</div>
@@ -27,6 +33,7 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>
@@ -41,15 +48,23 @@
     </div>
   </section>
 
+  <!-- Education -->
   <section class="section" id="education">
     <h2 class="section-title">Education</h2>
     <ul class="timeline">
-      <li class="timeline-item"><strong>BS Software Engineering</strong> – GIFT University</li>
-      <li class="timeline-item"><strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges</li>
-      <li class="timeline-item"><strong>Matriculation</strong> – Jadeed Dastgir Ideal High School</li>
+      <li class="timeline-item">
+        <strong>BS Software Engineering</strong> – GIFT University
+      </li>
+      <li class="timeline-item">
+        <strong>Intermediate (ICS - Physics)</strong> – Punjab Group of Colleges
+      </li>
+      <li class="timeline-item">
+        <strong>Matriculation</strong> – Jadeed Dastgir Ideal High School
+      </li>
     </ul>
   </section>
 
+  <!-- Skills -->
   <section class="section" id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
@@ -63,6 +78,7 @@
     </div>
   </section>
 
+  <!-- Certifications -->
   <section class="section" id="certifications">
     <h2 class="section-title">Certifications</h2>
     <div class="cert-card">
@@ -71,6 +87,7 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section class="section" id="projects">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
@@ -108,6 +125,7 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section class="section" id="contact">
     <h2 class="section-title">Let's Connect</h2>
     <div class="contact-grid">
@@ -126,6 +144,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>Where code meets creativity</p>
     <div class="footer-social">
@@ -135,17 +154,20 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const navbar = document.querySelector('.navbar');
       const navLinks = document.querySelector('.nav-links');
       const hamburger = document.querySelector('.hamburger');
 
+      // Mobile Menu Toggle
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
       });
 
+      // Smooth Scroll with Menu Close
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
           e.preventDefault();
@@ -162,24 +184,27 @@
         });
       });
 
+      // Scroll Animation Observer (Staggered Reveal)
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach(entry => {
+          entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-              entry.target.style.opacity = 1;
-              entry.target.style.transform = 'translateY(0)';
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, index * 100);
             }
           });
         },
         { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
       );
 
-      document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)';
-        observer.observe(section);
-      });
+      // Observe animated elements
+      [
+        ...document.querySelectorAll('.timeline-item'),
+        ...document.querySelectorAll('.skill-card'),
+        ...document.querySelectorAll('.project-card'),
+        ...document.querySelectorAll('.contact-item')
+      ].forEach(el => observer.observe(el));
     });
   </script>
 </body>
