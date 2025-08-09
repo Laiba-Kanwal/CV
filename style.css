@@ -19,7 +19,6 @@
   --navbar-height: 70px;
   --transition: all 0.5s cubic-bezier(0.25, 0.75, 0.5, 1);
   --gradient: linear-gradient(135deg, var(--primary), var(--accent));
-  --purple-gradient: linear-gradient(135deg, #8e2de2, #4a00e0);
 }
 
 body {
@@ -182,7 +181,7 @@ body {
 .hero {
   padding: 10rem 2rem 6rem;
   text-align: center;
-  background:
+  background: 
     radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.1), transparent 50%),
     radial-gradient(circle at 30% 80%, rgba(79, 70, 229, 0.1), transparent 50%),
     linear-gradient(135deg, #f3e8ff, #e0f2fe);
@@ -411,20 +410,24 @@ body {
 
 /* Certifications */
 .certifications-grid {
-  display: flex;
-  flex-direction: column; /* Stack cards vertically */
-  gap: 1.5rem; /* Increased spacing between cards */
-  max-width: 400px; /* Adjust width as needed */
-  margin: 0 auto; /* Center the grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .cert-card {
-  background: var(--purple-gradient); /* Purple gradient */
-  color: white;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); /* Subtle glow effect */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  padding: 1.8rem 1.6rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -434,36 +437,47 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 5px;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-  opacity: 0;
-  transition: opacity 0.5s;
-  z-index: -1;
+  background: var(--gradient);
+  transition: width 0.5s;
 }
 
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.5);
+.cert-card:hover::before {
+  width: 100%;
+  opacity: 0.1;
 }
 
 .cert-card i {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 1rem;
-  text-align: center;
+  color: var(--primary);
+  font-size: 1.6rem;
+  min-width: 40px;
+  transition: var(--transition);
 }
 
 .cert-card .cert-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 .cert-card .cert-content p {
-  font-size: 1.1rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+}
+
+.cert-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+}
+
+.cert-card:hover i {
+  color: var(--primary-light);
+  transform: scale(1.1) rotate(10deg);
 }
 
 /* Projects */
@@ -612,8 +626,8 @@ body {
   height: 100%;
   background: var(--gradient);
   opacity: 0;
-  transition: opacity 0.5s;
   z-index: -1;
+  transition: opacity 0.5s;
   border-radius: 18px;
 }
 
