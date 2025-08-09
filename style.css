@@ -395,7 +395,7 @@ body {
 .skill-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: var(--shadow-hover);
-  color: white;
+  color: #0f172a; /* Dark blue color */
   border-color: transparent;
 }
 
@@ -405,9 +405,8 @@ body {
 
 .skill-card:hover i {
   transform: rotate(10deg) scale(1.1);
-  color: white;
+  color: #0f172a; /* Dark blue color */
 }
-
 /* Certifications */
 .certifications-grid {
   display: flex;
@@ -766,4 +765,5 @@ footer p {
   .section { padding: 4rem 1rem; }
   .project-card { margin-bottom: 1.5rem; }
 }
+
 
