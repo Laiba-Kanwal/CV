@@ -1,4 +1,109 @@
-/* Reset & Base */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9; /* Soft background for the rest of the page */
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, #f3e7ff, #d0e4ff, #e0f2ff); /* Soft pastel gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite; /* Smooth gradient animation */
+  text-align: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white overlay */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #6d28d9; /* Vibrant purple */
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: #0056b3; /* Deep blue */
+  margin-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ec4899; /* Pink accent */
+  margin: 0.5rem auto;
+}
+
+p {
+  font-size: 1.4rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #003d82;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 86, 179, 0.4);
+}
+
+.btn-secondary {
+  background-color: #ec4899;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #c7388b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(198, 56, 139, 0.4);
+}
+
+.fa-download {
+  margin-right: 0.5rem;
+}
 * {
   margin: 0;
   padding: 0;
@@ -601,3 +706,4 @@ footer p {
     text-align: center;
   }
 }
+
