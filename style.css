@@ -468,22 +468,20 @@ p {
   transform: translateX(6px);
 }
 
-/* Contact */
+/* Contact Section */
 .contact-grid {
   display: flex;
-  justify-content: center;
-  gap: 2.6rem;
-  margin-top: 3rem;
-  flex-wrap: nowrap;
+  justify-content: space-between; /* Aligns items with equal spacing */
+  gap: 2.4rem; /* Spacing between boxes */
+  margin-top: 2.8rem;
+  flex-wrap: nowrap; /* Keep them horizontal */
 }
 
 .contact-item {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: 1.6rem;
-  padding: 2.2rem 2.6rem;
+  padding: 2.2rem 2.6rem; /* Increased padding for larger boxes */
   background: white;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -494,8 +492,8 @@ p {
   transition: all 0.5s ease;
   opacity: 0;
   transform: translateY(50px);
-  min-width: 240px;
-  max-width: 300px;
+  min-width: 220px; /* Minimum width to ensure consistency */
+  max-width: 300px; /* Maximum width for responsiveness */
   border: 1px solid #e2e8f0;
 }
 
@@ -517,7 +515,6 @@ p {
   color: white;
   transform: scale(1.4) rotate(12deg);
 }
-
 /* Footer */
 footer {
   text-align: center;
@@ -604,3 +601,4 @@ footer p {
     padding: 2rem 2.2rem;
   }
 }
+
