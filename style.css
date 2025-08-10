@@ -520,8 +520,9 @@ footer {
 footer p {
   margin-bottom: 1.8rem;
   font-size: 1.3rem;
-  opacity: 0.9;
+  color: white; /* Explicitly set to white */
   font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Optional: improves readability */
 }
 
 .footer-social {
@@ -591,3 +592,4 @@ footer p {
     font-size: 1.8rem;
   }
 }
+
