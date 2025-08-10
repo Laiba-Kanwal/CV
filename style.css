@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1550751827-4bd3744a4ad8?w=1920&h=1080&fit=crop&crop=edges');
+}
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #f8fbff 0%, #f0f4ff 100%);
@@ -585,3 +587,4 @@ footer p {
     font-size: 1.8rem;
   }
 }
+
